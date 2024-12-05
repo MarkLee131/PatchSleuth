@@ -34,4 +34,4 @@ Phase-2 uses the output of Phase-1 as the input data, i.e., the top-100 commits 
 ```
 Since the fine-tuned model files are large, we have not included them in the repository. However, you can download the fine-tuned model files from [[Google Drive]( https://drive.google.com/file/d/1s7pgHduaXoumEx_stb32S75Ysj39U0bd/view?usp=sharing)](https://drive.google.com/file/d/1JIxaZlZQHGQ_JDu3YXFfi0YTa9JK8YY4/view?usp=sharing).
 
-To reproduce our metrics, we also provided the corresponding test set (Top 100 result for 480 CVEs, which is the output from Phase-1) I used for evaluating in our paper here: 
+To reproduce our metrics, we also provided the corresponding test set (Top 100 result for 480 CVEs, which is the output from Phase-1) I used for evaluating in our paper at [top_100_fusion.zip](./top_100_fusion.zip). 
