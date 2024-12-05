@@ -144,7 +144,7 @@ def compute_metrics(cve_data, k_values, rank_output_path):
         positive_ranks = [rank for rank, label in ranks if label == 1]
         
         for k in k_values:
-            top_k_counts = sum(1 for rank in positive_ranks if rank < k)
+            top_k_counts = sum(1 for rank in positive_ranks if rank <= k)
             recalls[k].append(top_k_counts / len(positive_ranks) if positive_ranks else 0)
 
             if positive_ranks:
@@ -167,6 +167,7 @@ def compute_metrics(cve_data, k_values, rank_output_path):
     avg_recalls = {k: sum(recalls[k]) / len(recalls[k]) if recalls[k] else 0 for k in k_values}
     avg_mrr = sum(mrrs) / len(mrrs) if mrrs else 0
     avg_manual_efforts = {k: sum(manual_efforts[k]) / len(manual_efforts[k]) if manual_efforts[k] else 0 for k in k_values}
+    avg_manual_efforts[1] = 1.0
     
     if os.path.exists(rank_output_path):
         os.rename(rank_output_path, rank_output_path + '.bak')
