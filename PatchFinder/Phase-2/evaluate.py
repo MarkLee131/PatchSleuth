@@ -2,6 +2,9 @@
 2024.08.13
 
 This script is used to evaluate the model on the test set.
+
+2024.12.05
+tip: use the conda environment `patch_match` to run this script.
 """
 
 
@@ -16,7 +19,7 @@ import pytorch_lightning as pl
 import torch.nn as nn
 from transformers import AutoModelForSeq2SeqLM
 import configs
-from model.load_data import CVEDataset
+from load_data import CVEDataset
 # from load_data_colbert import CVEDataset #### Updated to load_data_colbert
 
 
@@ -226,10 +229,10 @@ def save_metrics_to_csv(avg_recalls, avg_mrr, manual_efforts, save_path):
 
 if __name__ == "__main__":
 
-    # MODEL_PATH = "/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/Checkpoints/final_model.pt"
+    MODEL_PATH = "/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/Checkpoints/final_model.pt"
     # MODEL_PATH = "/mnt/local/Baselines_Bugs/PatchFinder/Phase-2/output_1004/Checkpoints/final_model.pt"  
     # MODEL_PATH = "//mnt/local/Baselines_Bugs/PatchFinder/Phase-2/output_1004_20epoch/Checkpoints/final_model.pt"
-    MODEL_PATH = "/mnt/local/Baselines_Bugs/PatchFinder/Phase-2/output_1007_20epoch/Checkpoints/final_model.pt" 
+    # MODEL_PATH = "/mnt/local/Baselines_Bugs/PatchFinder/Phase-2/output_1007_20epoch/Checkpoints/final_model.pt" 
     
     test_file_fusion = '/mnt/local/Baselines_Bugs/CR_score/evaluate/fusion_unnormalized/top_100_fusion.csv'
     
@@ -267,8 +270,8 @@ if __name__ == "__main__":
         # data_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_1007_20epoch/predict_{data_path_flag}.csv',
         # rank_info_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_1007_20epoch/rank_info_{data_path_flag}.csv'
         
-        data_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/1210predict_{data_path_flag}.csv',
-        rank_info_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/1210rank_info_{data_path_flag}.csv'
+        data_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/2024_predict_{data_path_flag}.csv',
+        rank_info_path=f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/2024_rank_info_{data_path_flag}.csv'
         
         
         )
@@ -277,9 +280,10 @@ if __name__ == "__main__":
     # metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/metrics_{data_path_flag}.csv'
     # metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_1004_20epoch/metrics_{data_path_flag}.csv'
     
-    metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_1007_20epoch/metrics_{data_path_flag}.csv'
+    # metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_1007_20epoch/metrics_{data_path_flag}.csv'
     
     # metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/1210metrics_{data_path_flag}.csv'
+    metrics_save_path = f'/mnt/local/Baselines_Bugs/PatchFinder/metrics/CR_0831/2024_metrics_{data_path_flag}.csv'
     
     save_metrics_to_csv(recalls, avg_mrr, manual_efforts, metrics_save_path)
 
