@@ -73,6 +73,6 @@ More details can be found on our [website](https://sites.google.com/view/issta20
 
 ## 
 > [!IMPORTANT]
-> 
-> [**2024.09.04**] We are keeping improving the documents and adding more implementation details. Feel free to share your suggestions for this process by opening issues or PRs. :)
+>
+>  Feel free to share your suggestions for this process by opening issues or PRs. :)
 
