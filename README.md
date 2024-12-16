@@ -50,11 +50,21 @@ When applying PatchFinder in practice, we initially identified 533 patch commits
 ### BibTeX
 
 ```
-@inproceedings{li2024patchfinder,
-  title={PatchFinder: A Two-Phase Approach to Security Patch Tracing for Disclosed Vulnerabilities in Open Source Software},
-  author={Li, Kaixuan and Zhang, Jian and Chen, Sen and Liu, Han and Liu, Yang and Chen, Yixiang},
-  booktitle={Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis},
-  year={2024}
+@inproceedings{10.1145/3650212.3680305,
+author = {Li, Kaixuan and Zhang, Jian and Chen, Sen and Liu, Han and Liu, Yang and Chen, Yixiang},
+title = {PatchFinder: A Two-Phase Approach to Security Patch Tracing for Disclosed Vulnerabilities in Open-Source Software},
+year = {2024},
+isbn = {9798400706127},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3650212.3680305},
+doi = {10.1145/3650212.3680305},
+booktitle = {Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis},
+pages = {590–602},
+numpages = {13},
+keywords = {Large language models, Patch ranking, Security patches},
+location = {Vienna, Austria},
+series = {ISSTA 2024}
 }
 ```
 ## Website
